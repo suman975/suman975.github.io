@@ -4,5 +4,3 @@
 
 layout: home
 ---
-
-Good Things are coming
