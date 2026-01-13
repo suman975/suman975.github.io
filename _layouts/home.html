@@ -8,8 +8,9 @@ layout: default
   {%- endif -%}
 
   {{ content }}
-
-  <div class="gallery">
+  
+  
+  <div class="gallery-collage">
     {% for art in site.artworks %}
     <a href="{{ art.image }}" data-lightbox="artworks" data-title="{{ art.title }}">
       <img src="{{ art.image }}" alt="{{ art.title }}" loading="lazy">

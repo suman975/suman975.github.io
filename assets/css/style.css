@@ -1,32 +1,24 @@
-/* Gallery Grid */
-.gallery {
+.gallery-collage {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
+    grid-auto-rows: 10px; /* small row height for precise masonry effect */
+    gap: 10px;
 }
 
-/* Thumbnails: make them uniform while keeping aspect ratio */
-.gallery img {
-    width: 100%;           /* Fill grid cell width */
-    height: 200px;         /* Fixed height for uniform rows */
-    object-fit: cover;     /* Crop if needed, preserves aspect ratio */
+.gallery-collage a {
+    display: block;
+    position: relative;
+}
+
+.gallery-collage img {
+    width: 100%;
+    height: auto; /* maintains original aspect ratio */
+    display: block;
     border-radius: 8px;
     transition: transform 0.3s ease;
-    display: block;
 }
 
-/* Hover zoom effect */
-.gallery img:hover {
+/* Optional hover effect */
+.gallery-collage img:hover {
     transform: scale(1.05);
-}
-
-@media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 10px;
-    }
-
-    .gallery img {
-        height: 150px;
-    }
 }
