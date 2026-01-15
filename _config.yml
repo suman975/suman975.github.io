@@ -32,7 +32,7 @@ plugins:
   - jekyll-feed
 
 collections:
-  artworks:
+  portfolio_before_2010:
     output: true
     
 # Exclude from processing.
