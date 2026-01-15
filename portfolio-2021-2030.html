@@ -1,0 +1,13 @@
+---
+layout: default
+title: 2021 - 2030
+permalink: /portfolio-2021-2030/
+---
+
+<div class="gallery-collage">
+    {% for art in site.portfolio_before_2010 %}
+    <a href="{{ art.image }}" data-lightbox="portfolio_before_2010" data-title="{{ art.title }}">
+        <img src="{{ art.image }}" alt="{{ art.title }}" loading="lazy">
+    </a>
+    {% endfor %}
+</div>
