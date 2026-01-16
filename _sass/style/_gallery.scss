@@ -1,0 +1,24 @@
+.gallery-collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 10px; /* small row height for precise masonry effect */
+  gap: 10px;
+}
+
+.gallery-collage a {
+  display: block;
+  position: relative;
+}
+
+.gallery-collage img {
+  width: 100%;
+  height: auto; /* maintains original aspect ratio */
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.gallery-collage img:hover {
+  transform: scale(1.05);
+}
