@@ -1,9 +1,7 @@
 @charset "utf-8";
 
 // Import partials.
-@import
-"style/base",
-"style/navbar",
-"style/gallery",
-"style/homepage"
-;
+@import "style/base";
+@import "style/navbar";
+@import "style/gallery";
+@import "style/homepage";
