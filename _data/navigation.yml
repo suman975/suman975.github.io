@@ -4,13 +4,14 @@ main:
 
   - title: Portfolio
     children:
-      - title: 2026 – 2035
-        url: /portfolio-2026-2035/
-      - title: 2016 – 2025
-        url: /portfolio-2016-2025/
-      - title: 2005 – 2015
-        url: /portfolio-2005-2015/
+      - title: Sketch
+        url: /portfolio-sketch/
+      - title: Digital Arts
+        url: /portfolio-digital-arts/
       
-
   - title: About
     url: /about/
+    
+  - title: Contact
+    url: /contact/
+

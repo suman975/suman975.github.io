@@ -2,3 +2,13 @@
   max-width: 960px;
   margin: 0px auto 0px;
 }
+/* Make navbar links and brand uppercase */
+.navbar .nav-link,
+.navbar .navbar-brand {
+  text-transform: uppercase;
+}
+
+/* Make dropdown menu links uppercase */
+.navbar .dropdown-menu .dropdown-item {
+  text-transform: uppercase;
+}
