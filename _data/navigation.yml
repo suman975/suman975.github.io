@@ -1,13 +1,10 @@
 main:
-  - title: Home
-    url: /
-
-  - title: Portfolio
-    children:
-      - title: Sketch
-        url: /portfolio-sketch/
-      - title: Digital Arts
-        url: /portfolio-digital-arts/
+    
+  - title: Sketch
+    url: /portfolio-sketch/
+  
+  - title: Digital Arts
+    url: /portfolio-digital-arts/
       
   - title: About
     url: /about/
