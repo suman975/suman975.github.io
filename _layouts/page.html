@@ -1,18 +1,22 @@
 ---
 layout: base
 ---
-<article class="alignCenter gallery-container">
+<div id="center-container">
+  <article class="gallery-container">
 
-  <header class="post-header">
-    <h1 class="page-heading">{{ page.title }}</h1>
-  </header>
+    <header class="post-header">
+      <h1 class="page-heading">{{ page.title }}</h1>
+    </header>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+    <div class="post-content">
+      {{ content }}
+    </div>
 
-</article>
+  </article>
 
-<footer class="site-footer h-card">
-  {% include footer-script.html %}
-</footer>
+  <footer class="site-footer h-card">
+    {% include footer-script.html %}
+  </footer>
+  
+</div>
+

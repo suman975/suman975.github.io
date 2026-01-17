@@ -8,3 +8,7 @@
 .navbar .dropdown-menu .dropdown-item {
   text-transform: uppercase;
 }
+.navbar-nav .nav-link.active {
+  font-weight: 450 !important;
+  color: #dd1144 !important;
+}
