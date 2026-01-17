@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: base
 ---
-<article class="post">
+<article class="alignCenter">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <h1 class="page-heading">{{ page.title }}</h1>
   </header>
 
   <div class="post-content">
@@ -12,3 +12,7 @@ layout: default
   </div>
 
 </article>
+
+<footer class="site-footer h-card">
+  {% include footer-script.html %}
+</footer>
