@@ -4,12 +4,12 @@ main:
 
   - title: Portfolio
     children:
-      - title: After 2021
-        url: /portfolio-2021-2030/
-      - title: 2011–2020
-        url: /portfolio-2011-2020/
-      - title: Before 2010
-        url: /portfolio-before-2010/
+      - title: 2026 – 2035
+        url: /portfolio-2026-2035/
+      - title: 2016 – 2025
+        url: /portfolio-2016-2025/
+      - title: 2005 – 2015
+        url: /portfolio-2005-2015/
       
 
   - title: About
