@@ -4,91 +4,18 @@
 
 layout: home
 ---
+<!-- BACKGROUND VIDEO (NOT A SECTION) -->
+<video
+        class="bg-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="fallback.jpg"
+        aria-hidden="true"
+>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    <source src="hero.webm" type="video/webm">
+</video>
 
-<!-- HERO with background video -->
-<section class="hero-video has-overlay" aria-label="Decorative background video section">
-    <video
-            class="hero-video__bg"
-            playsinline
-            webkit-playsinline
-            muted
-            loop
-            autoplay
-            preload="metadata"
-            poster="fallback.jpg"  <!-- TODO: replace with your poster image URL -->
-    aria-hidden="true"     <!-- Background video is decorative -->
-    tabindex="-1"
-    >
-    <!-- TODO: Replace with your actual video URLs -->
-    <source src="https://www.w3schools.com/html/mov_bbb.mp4"tional: Serve WebM first for supporting browsers
-    <source src="https://example.com/path/video.webm    Your browser does not support the video tag.
-    </video>
-
-    <!-- Overlayed content -->
-    <div class="hero-video__content">
-    <div>
-        <h1>Stunning Full‑Width Video</h1>
-        <p>Autoplays inline on mobile (muted), with graceful fallbacks and accessibility in mind.</p>
-        <div class="hero-video__actions">
-            <button class="btn">Primary Action</button>
-            <button class="btn btn--ghost" id="toggleSoundBtn" aria-pressed="false" aria-label="Toggle sound (requires user interaction)">Enable Sound</button>
-        </div>
-    </div>
-    </div>
-</section>
-
-
-
-<script>
-    // --- Graceful fallback if autoplay is blocked: try to play() and reveal poster if it fails.
-    (function () {
-        const video = document.querySelector('.hero-video__bg');
-        if (!video) return;
-
-        // Some browsers do not autostart until play() is called explicitly.
-        // If play() rejects due to policy, keep the poster visible (CSS already handles).
-        const tryPlay = () => {
-            const p = video.play();
-            if (p && typeof p.then === 'function') {
-                p.catch(() => {
-                    // Autoplay blocked: keep poster only
-                    video.style.opacity = 0; // Hide black video if it doesn't start
-                    // Set a background image as a fallback (uses the poster if provided)
-                    const poster = video.getAttribute('poster');
-                    const hero = document.querySelector('.hero-video');
-                    if (poster && hero) {
-                        hero.style.background = `url('${poster}') center / cover no-repeat`;
-                    }
-                });
-            }
-        };
-
-        // Attempt on load; some browsers need a small delay
-        if (video.readyState >= 2) {
-            tryPlay();
-        } else {
-            video.addEventListener('loadeddata', tryPlay, { once: true });
-            // Also try after a short timeout as a safety net
-            setTimeout(tryPlay, 800);
-        }
-
-        // Optional: Toggle sound (requires user gesture to allow audio).
-        const toggleBtn = document.getElementById('toggleSoundBtn');
-        if (toggleBtn) {
-            toggleBtn.addEventListener('click', async () => {
-                const isMuted = video.muted;
-                video.muted = !isMuted;
-                toggleBtn.setAttribute('aria-pressed', String(!isMuted));
-                toggleBtn.textContent = video.muted ? 'Enable Sound' : 'Mute Sound';
-                try {
-                    await video.play();
-                } catch (e) {
-                    // If play is blocked, revert to muted
-                    video.muted = true;
-                    toggleBtn.setAttribute('aria-pressed', 'false');
-                    toggleBtn.textContent = 'Enable Sound';
-                }
-            });
-        }
-    })();
-</script>
