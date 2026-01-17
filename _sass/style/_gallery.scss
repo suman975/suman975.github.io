@@ -3,20 +3,19 @@
 }
 .gallery-collage {
   column-count: 3;
-  column-gap: 12px;
+  column-gap: 4px;
 }
 
 .gallery-collage a {
   display: block;
   break-inside: avoid;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 
 .gallery-collage img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
