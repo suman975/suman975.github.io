@@ -1,3 +1,6 @@
+.custom-navbar {
+  background-color: #e4f5e8; /* example */
+}
 /* Make navbar links and brand uppercase */
 .navbar .nav-link,
 .navbar .navbar-brand {
@@ -14,11 +17,12 @@
   font-weight: 450 !important;
   color: #dd1144 !important;
 }
-.custom-navbar {
-  background-color: #e4f5e8; /* example */
-}
-
 .custom-navbar .nav-link,
 .custom-navbar .navbar-brand {
   color: #fff;
+}
+
+.navbar .navbar-brand {
+  margin: 0;
+  padding: 0;
 }

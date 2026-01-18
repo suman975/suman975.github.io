@@ -2,21 +2,19 @@
 layout: base
 ---
 <div id="center-container">
-    <div class="gallery-container">
-        <h1 class="page-heading">{{ page.title }}</h1>
-        <div class="gallery-collage">
-            {% assign items = site.data[page.data_source] %}
+    <h1 class="page-heading">{{ page.title }}</h1>
+    <div class="gallery-collage">
+        {% assign items = site.data[page.data_source] %}
 
-            {% for file in items %}
-            <a href="{{ file.image }}"
-               data-lightbox="{{ page.lightbox }}"
-               data-title="{{ file.title }}">
-                <img src="{{ file.image }}"
-                     alt="{{ file.title }}"
-                     loading="lazy">
-            </a>
-            {% endfor %}
-        </div>
+        {% for file in items %}
+        <a href="{{ file.image }}"
+           data-lightbox="{{ page.lightbox }}"
+           data-title="{{ file.title }}">
+            <img src="{{ file.image }}"
+                 alt="{{ file.title }}"
+                 loading="lazy">
+        </a>
+        {% endfor %}
     </div>
 
     <footer class="site-footer h-card">
