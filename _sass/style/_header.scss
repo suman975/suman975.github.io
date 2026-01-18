@@ -3,7 +3,9 @@
 .navbar .navbar-brand {
   text-transform: uppercase;
 }
-
+.navbar-brand {
+  color: #00078f !important;
+}
 /* Make dropdown menu links uppercase */
 .navbar .dropdown-menu .dropdown-item {
   text-transform: uppercase;
@@ -11,4 +13,12 @@
 .navbar-nav .nav-link.active {
   font-weight: 450 !important;
   color: #dd1144 !important;
+}
+.custom-navbar {
+  background-color: #e4f5e8; /* example */
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: #fff;
 }
