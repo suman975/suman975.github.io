@@ -2,21 +2,15 @@
 layout: base
 ---
 <div id="center-container">
-  <article>
-
-    <header>
-      <h1 class="page-heading">{{ page.title }}</h1>
-    </header>
-
+  
+    <h1 class="page-heading">{{ page.title }}</h1>
+  
     <div class="post-content">
       {{ content }}
     </div>
-
-  </article>
-
-  <footer class="site-footer h-card">
-    {% include footer-script.html %}
-  </footer>
   
 </div>
 
+<footer class="site-footer h-card">
+  {% include footer-script.html %}
+</footer>
