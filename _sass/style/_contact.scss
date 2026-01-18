@@ -1,3 +1,4 @@
+/* ------------------ CONTACT SECTION ------------------ */
 .contact-section {
   min-height: 50vh;
   background: #fff;
@@ -9,15 +10,12 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-
   padding: 32px 20px;
   border-radius: 18px;
   border: 1px solid #eee;
-
-  text-decoration: none;
-  color: #111;
   background: #fff;
-
+  color: #111;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -38,5 +36,5 @@
 
 .contact-card-center:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }

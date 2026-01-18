@@ -1,4 +1,4 @@
-/* ---------- FULLSCREEN BACKGROUND VIDEO ---------- */
+/* ------------------ FULLSCREEN BACKGROUND VIDEO ------------------ */
 .bg-video {
   position: fixed;
   inset: 0;
@@ -6,26 +6,20 @@
   height: 100vh;
   object-fit: cover;
   object-position: center;
-
-  z-index: -2;          /* behind everything */
-  pointer-events: none; /* behaves like background */
+  z-index: -2;
+  pointer-events: none;
 }
 
-/* Optional dark overlay */
 .bg-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   z-index: -1;
   pointer-events: none;
 }
 
-/* Reduced motion */
+/* Reduced motion fallback */
 @media (prefers-reduced-motion: reduce) {
-  .bg-video {
-    display: none;
-  }
-  body {
-    background: url("/assets/website_images_videos/fallback.jpg") center / cover no-repeat fixed;
-  }
+  .bg-video { display: none; }
+  body { background: url("/assets/website_images_videos/fallback.jpg") center/cover no-repeat fixed; }
 }

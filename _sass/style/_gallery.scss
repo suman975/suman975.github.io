@@ -1,3 +1,4 @@
+/* ------------------ GALLERY COLLAGE ------------------ */
 .gallery-collage {
   column-count: 3;
   column-gap: 2px;
@@ -16,15 +17,11 @@
   transition: transform 0.3s ease;
 }
 
-/* Responsive */
+/* Responsive gallery */
 @media (max-width: 900px) {
-  .gallery-collage {
-    column-count: 2;
-  }
+  .gallery-collage { column-count: 2; }
 }
 
 @media (max-width: 500px) {
-  .gallery-collage {
-    column-count: 1;
-  }
+  .gallery-collage { column-count: 1; }
 }
