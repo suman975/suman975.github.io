@@ -3,10 +3,10 @@ main:
     url: /
     
   - title: Sketch
-    url: /portfolio-sketch/
+    url: /sketch/
   
   - title: Digital Arts
-    url: /portfolio-digital-arts/
+    url: /digital-arts/
       
   - title: About
     url: /about/

@@ -1,0 +1,35 @@
+---
+layout: base
+---
+
+<div id="center-container">
+    <h1 class="page-heading">{{ page.title }}</h1>
+
+    <div class="gallery-collage">
+        {% assign all_files = site.static_files | where_exp: "f", "f.path contains page.folder" %}
+
+        {% for img in all_files %}
+        <a href="{{ img.path }}" data-lightbox="{{ page.lightbox }}" title="{{ img.name | replace: '.jpg','' }}">
+            <img src="{{ img.path }}"
+                 alt="{{ img.name | replace: '.jpg','' }}"
+                 loading="lazy"
+                 width="600"
+                 height="400">
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Initialize Lightbox / PhotoSwipe -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+<script type="module">
+    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@6/dist/photoswipe-lightbox.esm.js';
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '.gallery-collage',
+        children: 'a',
+        pswpModule: () => import('https://unpkg.com/photoswipe@6/dist/photoswipe.esm.js')
+    });
+    lightbox.init();
+</script>

@@ -15,4 +15,24 @@
 
     lightbox.init();
 </script>
+
+    <script>
+        document.addEventListener('click', function(event) {
+            const navbar = document.getElementById('navbarNavDropdown'); // your collapse ID
+            const toggler = document.querySelector('.navbar-toggler');
+
+            // Check if menu is open
+            const isExpanded = navbar.classList.contains('show');
+
+            // If menu is open and click is outside navbar/collapse
+            if (isExpanded && !navbar.contains(event.target) && !toggler.contains(event.target)) {
+                // Collapse the menu
+                const bsCollapse = bootstrap.Collapse.getInstance(navbar);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                }
+            }
+        });
+    </script>
+
 </footer>
