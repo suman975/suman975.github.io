@@ -25,3 +25,13 @@
 @media (max-width: 500px) {
   .gallery-collage { column-count: 1; }
 }
+
+/* Blur effect while image is loading */
+.ps-gallery img {
+  filter: blur(8px);       /* initial blur */
+  transition: filter 0.5s ease;  /* smooth transition to sharp */
+}
+
+.ps-gallery img.loaded {
+  filter: blur(0);         /* remove blur when loaded */
+}

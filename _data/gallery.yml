@@ -58,6 +58,7 @@ digital_arts:
 - path: "/assets/digital_arts/19.jpg"
   width: 2347
   height: 1385
+js: []
 sketch:
 - path: "/assets/sketch/01.jpg"
   width: 1200

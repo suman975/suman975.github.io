@@ -11,12 +11,16 @@ layout: base
            data-pswp-width="{{ img.width }}"
            data-pswp-height="{{ img.height }}"
            target="_blank">
-            <img src="{{ img.path }}"
-                 alt="{{ img.path | split: '/' | last | replace: '.jpg','' }}"
-                 loading="lazy"
-                 width="600"
-                 height="400">
+
+            <div style="width:100%; aspect-ratio: {{ img.width }}/{{ img.height }}; background:#f0f0f0;">
+                <img src="{{ img.path }}"
+                     alt="{{ img.path | split: '/' | last | replace: '.jpg','' }}"
+                     loading="lazy"
+                     style="width:100%; height:100%; object-fit:cover; display:block;">
+            </div>
+
         </a>
         {% endfor %}
     </div>
+
 </div>
