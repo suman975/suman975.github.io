@@ -1,13 +1,13 @@
 /* ------------------ GALLERY COLLAGE ------------------ */
 .gallery-collage {
-  column-count: 3;
-  column-gap: 2px;
+  column-count: 4;
+  column-gap: 10px;
 }
 
 .gallery-collage a {
   display: block;
   break-inside: avoid;
-  margin-bottom: 2px;
+  margin-bottom: 10px;
 }
 
 .gallery-collage img {
