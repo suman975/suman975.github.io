@@ -1,20 +1,20 @@
 
 <footer class="site-footer h-card">
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
+    <!-- PhotoSwipe JS -->
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+        import PhotoSwipe from 'https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js';
 
-<script type="module">
-    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@6/dist/photoswipe-lightbox.esm.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '.ps-gallery',
+            children: 'a',
+            pswpModule: () => Promise.resolve(PhotoSwipe)
+        });
 
-    const lightbox = new PhotoSwipeLightbox({
-        gallery: '.gallery-collage',
-        children: 'a',
-        pswpModule: () => import('https://unpkg.com/photoswipe@6/dist/photoswipe.esm.js')
-    });
+        lightbox.init();
+    </script>
 
-    lightbox.init();
-</script>
 
     <script>
         document.addEventListener('click', function(event) {
