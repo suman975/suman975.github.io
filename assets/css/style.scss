@@ -3,8 +3,8 @@
 @charset "utf-8";
 
 // Import partials.
-@use "scss/base";
-@use "scss/header";
-@use "scss/gallery";
-@use "scss/homepage";
-@use "scss/contact";
+@import "scss/base";
+@import "scss/header";
+@import "scss/gallery";
+@import "scss/homepage";
+@import "scss/contact";
