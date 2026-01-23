@@ -5,22 +5,17 @@ layout: base
     <h1 class="page-heading">{{ page.title }}</h1>
 
     <div class="ps-gallery gallery-collage">
-        {% assign all_files = site.static_files | where_exp: "f", "f.path contains page.folder" %}
-
-        {% for img in all_files %}
-        <a
-                href="{{ img.path }}"
-                data-pswp-width="1920"
-                data-pswp-height="1280"
-                target="_blank"
-        >
-            <img
-                    src="{{ img.path }}"
-                    alt="{{ img.name | replace: '.jpg','' }}"
-                    loading="lazy"
-                    width="600"
-                    height="400"
-            >
+        {% assign gallery = site.data.gallery[page.folder] %}
+        {% for img in gallery %}
+        <a href="{{ img.path }}"
+           data-pswp-width="{{ img.width }}"
+           data-pswp-height="{{ img.height }}"
+           target="_blank">
+            <img src="{{ img.path }}"
+                 alt="{{ img.path | split: '/' | last | replace: '.jpg','' }}"
+                 loading="lazy"
+                 width="600"
+                 height="400">
         </a>
         {% endfor %}
     </div>
