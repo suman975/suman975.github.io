@@ -1,4 +1,10 @@
 ---
 ---
+@charset "utf-8";
 
-@import "main";
+// Import partials.
+@use "scss/base";
+@use "scss/header";
+@use "scss/gallery";
+@use "scss/homepage";
+@use "scss/contact";
