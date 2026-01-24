@@ -11,18 +11,32 @@ html {
 *, *::before, *::after {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none; /* removes underline */
+  color: #FFD700;        /* keeps the text color same as surrounding */
+}
 
 /* ------------------ CENTER CONTAINER ------------------ */
 #center-container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 30px 5px;
+  padding: 70px 5px 10px 5px;
 }
 
 /* ------------------ HEADINGS ------------------ */
 .page-heading {
   text-transform: uppercase;
-  color: #6b6b6b;
+  color: #808080;
   font-size: 1rem;
-  margin: 50px 0 10px 0;
+  margin: 10px 0 10px 0;
+  clear: both;
+}
+/* ------------------ FOOTER ------------------ */
+.footer-text {
+  color: #808080;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.site-footer {
+  padding-top: 20px;
 }
