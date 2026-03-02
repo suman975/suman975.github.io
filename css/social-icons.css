@@ -8,16 +8,16 @@
 }
 .social-icon{
     display:inline-flex;
-    width:30px;
-    height:30px;
+    width:40px;
+    height:40px;
     align-items:center;
     justify-content:center;
     text-decoration:none;
 }
 .social-icon img{
     display:block;
-    width:30px;
-    height:30px;
+    width:40px;
+    height:40px;
     border: 0px;
     padding: 0px;
     margin: 0px;

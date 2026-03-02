@@ -11,8 +11,28 @@
     display: flex;
     flex-direction: column;
     border: 1px #2a2a2a solid;
-    /*background: #EEEEEE;*/
     overflow: hidden;
+}
+
+/* whole card clickable */
+.home-collage__link{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* accessibility focus */
+.home-collage__link:focus-visible{
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* optional hover (feel free to remove) */
+.home-collage__card:hover{
+    border-color: #444;
 }
 
 /* square image area */
@@ -20,78 +40,9 @@
     position: relative;
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;   /* square */
     overflow: hidden;
-    background: #000; /* fallback */
-}
-
-/* blurred background image */
-.home-collage__img-bg{
-    background: none;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    filter: blur(18px);
-    transform: scale(1);
-    opacity: 0.75;
-}
-
-/* foreground image (full image, no crop) */
-.home-collage__img{
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-    z-index: 1;
-    background: none;
-}
-
-/* caption */
-.home-collage__caption{
-    padding: 6px 4px 6px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    text-align: left;
-}
-
-/* title fixed height (2 lines) */
-.home-collage__title{
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.2;
-    text-align: left; !important;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-
-    min-height: calc(1.2em * 2);
-}
-
-/* date */
-.home-collage__date{
-    font-size: 10px;
-    opacity: 0.75;
-    color: #0066cc;
-}
-
-
-/* square image area (use aspect-ratio, NOT padding-top) */
-.home-collage__thumb{
-    position: relative;
-    display: block;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    background: #000; /* fallback */
-    
+    background: #000;      /* fallback */
 }
 
 /* FORCE both images to fill the thumb (beat theme defaults) */
@@ -125,7 +76,32 @@
     background: none;
 }
 
+/* caption */
+.home-collage__caption{
+    padding: 6px 4px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
 
+/* title fixed height (up to 3 lines, keep card heights consistent) */
+.home-collage__title{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 
-/*body{ background: hotpink !important; }*/
-/*.home-collage__thumb{ outline: 10px solid lime !important; }*/
+    min-height: calc(1.2em * 2);
+}
+
+/* date */
+.home-collage__date{
+    font-size: 10px;
+    opacity: 0.75;
+    color: #0066cc;
+}
