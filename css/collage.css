@@ -1,0 +1,131 @@
+/* grid */
+.home-collage{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+/* card */
+.home-collage__card{
+    display: flex;
+    flex-direction: column;
+    border: 1px #2a2a2a solid;
+    /*background: #EEEEEE;*/
+    overflow: hidden;
+}
+
+/* square image area */
+.home-collage__thumb{
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #000; /* fallback */
+}
+
+/* blurred background image */
+.home-collage__img-bg{
+    background: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(18px);
+    transform: scale(1);
+    opacity: 0.75;
+}
+
+/* foreground image (full image, no crop) */
+.home-collage__img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    z-index: 1;
+    background: none;
+}
+
+/* caption */
+.home-collage__caption{
+    padding: 6px 4px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
+
+/* title fixed height (2 lines) */
+.home-collage__title{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left; !important;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+
+    min-height: calc(1.2em * 2);
+}
+
+/* date */
+.home-collage__date{
+    font-size: 10px;
+    opacity: 0.75;
+    color: #0066cc;
+}
+
+
+/* square image area (use aspect-ratio, NOT padding-top) */
+.home-collage__thumb{
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #000; /* fallback */
+    
+}
+
+/* FORCE both images to fill the thumb (beat theme defaults) */
+.home-collage__thumb > img{
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    display: block !important;
+    background: none;
+}
+
+/* blurred background image */
+.home-collage__thumb > img.home-collage__img-bg{
+    object-fit: cover !important;
+    object-position: center !important;
+    filter: blur(18px) !important;
+    transform: scale(1.15);
+    opacity: 0.75;
+    z-index: 0;
+    background: none;
+}
+
+/* foreground image (full image visible) */
+.home-collage__thumb > img.home-collage__img{
+    object-fit: contain !important;
+    object-position: center !important;
+    z-index: 1;
+    background: none;
+}
+
+
+
+/*body{ background: hotpink !important; }*/
+/*.home-collage__thumb{ outline: 10px solid lime !important; }*/
