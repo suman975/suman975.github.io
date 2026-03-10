@@ -1,0 +1,116 @@
+/* grid */
+.home-collage{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+/* card */
+.home-collage__card{
+    display: flex;
+    flex-direction: column;
+    border: 1px #cccccc solid;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+/* whole card clickable */
+.home-collage__link{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* accessibility focus */
+.home-collage__link:focus-visible{
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* hover */
+.home-collage__card:hover{
+    border-color: #008000;
+}
+
+/* square image area */
+.home-collage__thumb{
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #000;
+}
+
+/* FORCE both images to fill the thumb (beat theme defaults) */
+.home-collage__thumb > img{
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    display: block !important;
+    background: none;
+}
+
+/* blurred background image */
+.home-collage__thumb > img.home-collage__img-bg{
+    object-fit: cover !important;
+    object-position: center !important;
+    filter: blur(18px) !important;
+    transform: scale(1.15);
+    opacity: 0.75;
+    z-index: 0;
+    background: none;
+}
+
+/* foreground image (full image visible) */
+.home-collage__thumb > img.home-collage__img{
+    object-fit: contain !important;
+    object-position: center !important;
+    z-index: 1;
+    background: none;
+}
+
+/* caption */
+.home-collage__caption{
+    padding: 8px 6px 7px;
+    text-align: left;
+}
+
+/* title + date row */
+.home-collage__meta{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+/* title */
+.home-collage__title{
+    flex: 1;
+    min-width: 0;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+/* date */
+.home-collage__date{
+    flex-shrink: 0;
+    font-size: 10px;
+    line-height: 1.2;
+    opacity: 0.75;
+    color: #003d7a;
+    white-space: nowrap;
+}
