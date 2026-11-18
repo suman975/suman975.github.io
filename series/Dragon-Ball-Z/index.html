@@ -3,18 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
-	<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
-	<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	<meta name="theme-color" content="#121316">
+	<link rel="icon" href="/favicon-avatar-circle.ico" sizes="16x16 32x32 48x48">
+	<link rel="icon" href="/favicon-avatar-circle-32.png" type="image/png" sizes="32x32">
+	<link rel="icon" href="/icon-avatar-circle-192.png" type="image/png" sizes="192x192">
+	<link rel="apple-touch-icon" href="/apple-touch-icon-sketchbook.png">
+	<meta name="theme-color" content="#fff5df">
+	<script>
+		
+		(function () {
+			var theme = 'light';
+			try { if (localStorage.getItem('suman-theme') === 'dark') theme = 'dark'; } catch (_) {}
+			document.documentElement.dataset.theme = theme;
+			document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#171b22' : '#fff5df';
+		})();
+	</script>
 
 	<title>Dragon Ball Z</title>
 
 	
 
 
-	<meta name="description" content=""><link rel="stylesheet" href="/css/custom.min.0aa7d3e7deb42b7452b08642abae2777d4c2453d507d151844679e28d37b8849.css" integrity="sha256-CqfT5960K3RSsIZCq64nd9TCRT1QfRUYRGeeKNN7iEk=">
+	<meta name="description" content=""><link rel="stylesheet" href="/css/custom.min.a5b0f439e310d4b03fca3c66d2f580c1f0e6793a99a062dcbb54a4eaade232f6.css" integrity="sha256-pbD0OeMQ1LA/yjxm0vWAwfDmeTqZoGLcu1Sk6q3iMvY=">
 	<link rel="alternate" type="application/rss+xml" href="/series/Dragon-Ball-Z/index.xml" title="Suman Acharya | Architect & Digital Artist in Pokhara, Nepal">
 
 	<link rel="canonical" href="https://suman975.com.np/series/Dragon-Ball-Z/">
@@ -25,6 +34,11 @@
 
 
 
+
+
+<meta property="og:image" content="https://suman975.com.np/images/suman-arts-social.jpg">
+<meta name="twitter:image" content="https://suman975.com.np/images/suman-arts-social.jpg">
+<meta name="twitter:card" content="summary_large_image">
 
 
 <meta property="og:url" content="https://suman975.com.np/series/Dragon-Ball-Z/">
@@ -56,13 +70,14 @@
 	gtag('config', 'G-WB20PZWJQB', { content_group: "Dragon Ball Z" });
 </script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
 
 
 </head>
 
 
-<script src="/js/script.min.b65cdd1305aa2b0f6d22f35cc7dcc339d2d64e78f14048a0d7b13842c207c7e5.js" integrity="sha256-tlzdEwWqKw9tIvNcx9zDOdLWTnjxQEig17E4QsIHx&#43;U="></script>
+<script src="/js/script.min.4f1c899e0a1c34b2a6ecd47b8ab022ad1101b2069cea3b7323aa5f62da66c0cc.js" integrity="sha256-TxyJngocNLKm7NR7irAirREBsgac6jtzI6pfYtpmwMw="></script>
 
 <script src="/js/tracking.min.00f884df6d8b29b2551011463a16cbfb9d43555b7703161c4d8d7be4ad9f26fc.js" integrity="sha256-APiE322LKbJVEBFGOhbL&#43;51DVVt3AxYcTY175K2fJvw=" defer></script>
 <script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
@@ -71,6 +86,11 @@
 
 <nav>
     <div class="nav-left">
+        <a class="site-brand" href="/" aria-label="Suman Acharya home"><img src="/icon-192.png" width="38" height="38" alt=""><span>Suman Acharya</span></a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+            <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.5 14.2A8.6 8.6 0 0 1 9.8 3.5 8.6 8.6 0 1 0 20.5 14.2Z"/></svg>
+            <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        </button>
         <button class="navtoggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
