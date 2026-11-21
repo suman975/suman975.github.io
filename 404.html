@@ -16,14 +16,15 @@
 			document.documentElement.dataset.theme = theme;
 			document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#171b22' : '#fff5df';
 		})();
+		(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");
 	</script>
 
-	<title>404 Page not found</title>
+	<title>404 Page not found · Suman Acharya</title>
 
 	
 
 
-	<meta name="description" content=""><link rel="stylesheet" href="/css/custom.min.f3ab35aa76cbb61fa6c47b9a00528446cb7d0b3ab3a6ae584c3de35f79871fca.css" integrity="sha256-86s1qnbLth&#43;mxHuaAFKERst9Czqzpq5YTD3jX3mHH8o=">
+	<meta name="description" content="Portfolio of Suman Acharya, an architect and digital artist in Pokhara, Nepal: residential architecture, interior design, 3D visualization, digital paintings and sketches."><link rel="stylesheet" href="/css/custom.min.f3ab35aa76cbb61fa6c47b9a00528446cb7d0b3ab3a6ae584c3de35f79871fca.css" integrity="sha256-86s1qnbLth&#43;mxHuaAFKERst9Czqzpq5YTD3jX3mHH8o=">
 
 	<link rel="canonical" href="https://suman975.com.np/404.html">
 	
@@ -71,13 +72,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
 
 
+	
+	<script src="/js/script.min.c7ccd0de867e8076464e6f370081c55c5ea48d77bf07161aa177f316994114af.js" integrity="sha256-x8zQ3oZ&#43;gHZGTm83AIHFXF6kjXe/BxYaoXfzFplBFK8=" defer></script>
+	
+	<script src="/js/tracking.min.00f884df6d8b29b2551011463a16cbfb9d43555b7703161c4d8d7be4ad9f26fc.js" integrity="sha256-APiE322LKbJVEBFGOhbL&#43;51DVVt3AxYcTY175K2fJvw=" defer></script>
 </head>
-
-
-<script src="/js/script.min.5ba8ef0afde5482239c7e1622e6e10cbead35a09980d27eb6a4a2972bd1016f4.js" integrity="sha256-W6jvCv3lSCI5x&#43;FiLm4Qy&#43;rTWgmYDSfrakopcr0QFvQ="></script>
-
-<script src="/js/tracking.min.00f884df6d8b29b2551011463a16cbfb9d43555b7703161c4d8d7be4ad9f26fc.js" integrity="sha256-APiE322LKbJVEBFGOhbL&#43;51DVVt3AxYcTY175K2fJvw=" defer></script>
-<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 
 <body>
 
@@ -125,22 +124,26 @@
 <div class="wrapper flex">
 	<div class="primary">
 		
-<main class="main" role="main">
-	<div class="warning">
-		<h1 class="warning__headline">404. Page not found</h1>
-		<p class="warning__text">The page you were looking for appears to have been moved, deleted or does not exist. Please, use search or go to <a href="/">main page</a>.</p>
+<div class="page-header" style="text-align:center;padding:4rem 1.5rem 3.5rem;">
+	<div class="eyebrow" style="color:var(--gold);font-weight:700;letter-spacing:0.12em;text-transform:uppercase;">404 — Not Found</div>
+	<h1 style="font-size:clamp(2.8rem,7vw,5rem);line-height:1;margin:0.6rem 0 1.2rem;">Page Not Found</h1>
+	<p class="post-lede" style="max-width:32rem;margin:0 auto 2.2rem;color:var(--ink-dim);font-size:1.05rem;">The artwork or architectural project you're looking for might have been moved or does not exist.</p>
+	<div class="hero-cta" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+		<a class="cta-btn cta-art" href="/">Back to Home <span aria-hidden="true">→</span></a>
+		<a class="cta-btn cta-arch" href="/architecture/">View Architecture</a>
+		<a class="cta-btn" href="/art/" style="background:var(--bg-raised);border:1px solid var(--line);color:var(--ink);padding:0.7rem 1.4rem;border-radius:4px;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;">Explore Art</a>
 	</div>
-</main>
+</div>
 
 	</div>
 
 </div>
 
 
-<div class="lightbox" id="lightbox">
-	<button class="close" id="lb-close">✕</button>
-	<button class="nav-btn prev" id="lb-prev">‹</button>
-	<button class="nav-btn next" id="lb-next">›</button>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Artwork lightbox">
+	<button class="close" id="lb-close" aria-label="Close lightbox">✕</button>
+	<button class="nav-btn prev" id="lb-prev" aria-label="Previous artwork">‹</button>
+	<button class="nav-btn next" id="lb-next" aria-label="Next artwork">›</button>
 	<div class="box">
 		<div class="imgwrap" id="lb-img">
 			<div class="spinner"></div>
